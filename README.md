@@ -207,7 +207,7 @@ dotnet run --project StackOverflowLite.API
 ## Start Containers
 
 ```bash
-docker compose up
+docker compose up --build
 ```
 
 
