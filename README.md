@@ -503,6 +503,7 @@ GET /api/questions
         "title": "How to use Redis with ASP.NET Core?",
         "description": "I want to cache my API response using Redis.",
         "author": "pranto",
+        "viewCount": 12,
         "acceptedAnswerId": null,
         "createdAt": "2026-06-26T14:35:51Z"
     }
@@ -536,10 +537,19 @@ GET /api/questions/{questionId}
     "title": "How to use Redis with ASP.NET Core?",
     "description": "I want to cache my API response using Redis.",
     "author": "pranto",
+    "viewCount": 12,
     "acceptedAnswerId": null,
     "createdAt": "2026-06-26T14:35:51Z"
 }
 ```
+
+> **Note:**  
+> This endpoint is cached using **Redis** to track how many times a question has been viewed.
+>Instead of updating PostgreSQL every time someone opens a question, the application stores the view count in **Redis**.
+>This approach is much faster and reduces unnecessary database writes.
+
+---
+
 # Step 10 - Set Questions Tag
 
 
